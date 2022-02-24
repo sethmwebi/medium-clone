@@ -30,7 +30,7 @@ export default async function createComment(
       comment
     })
   } catch(err){
-    return res.status(500).json({message: `Couldn't submit comment ${err.message}`})
+    return res.status(500).json({message: `Couldn't submit comment`, err})
   }
   res.status(200).json({ message: 'comment submitted!' })
 }
